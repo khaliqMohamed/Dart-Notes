@@ -1,0 +1,43 @@
+//CLASS WITH CONSTRUCTOR
+
+
+void main(){
+  BakeryShop B_Shop=BakeryShop('White Forest',30);
+  B_Shop.deliveryStatus();
+  B_Shop.userConfirmation();
+  B_Shop.greetingMsg();
+}
+
+class BakeryShop{
+  String itemName;
+  double itemPrice;
+  BakeryShop(this.itemName,this.itemPrice){
+    print("Welcome to Our bakery Shop...What You Want To Do?");
+    print('Item Name is $itemName');
+    print('Item Price is $itemPrice\$');
+    itemPreparation();
+    
+  }
+  
+  void itemPreparation(){
+    print("preparations are done...");
+    print('-----------------------------------------');
+  }
+  
+  
+  
+  void deliveryStatus(){
+    print('item ready for delivery...waiting for receive a address');
+    print('-----------------------------------------');
+  }
+  
+  void userConfirmation(){
+    print('Waiting for User Confirmation to received an item successful!');
+    print('-----------------------------------------');
+  }
+  
+  void greetingMsg(){
+    print('Thank You for Choosing Our Bakery... Please give us the rating point');
+  }
+  
+}
