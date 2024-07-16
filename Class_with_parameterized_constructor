@@ -1,0 +1,20 @@
+//parameterized constructor
+
+void main(){
+ add addi=add(1,2) ;
+  
+}
+
+class add{
+  int a;
+  int b;
+  int? c;
+  
+  add(this.a,this.b){
+    addition();
+  }
+  void addition(){
+    c=a+b;
+    print('$a + $b = $c');
+  }
+}
