@@ -23,7 +23,41 @@ class BakeryShop{
     print("preparations are done...");
     print('-----------------------------------------');
   }
+
+
+
+
+void main(){
+  final cookiestore=cookie('butter cookie',15);
   
+  
+}
+
+class cookie{
+  String? cookieName;
+  double? cookiePrice;    //declared a variables publicly bcoz we get the values from the object creation of the class and store it.
+  bool? isCool;
+  
+  cookie(this.cookieName,this.cookiePrice){   //this. mean to get the values from the object creation of the class and store it.
+    print('want to know about the cookie status?');
+    baking();
+    isCooling();
+    print('want to know about the delivery status?');
+    deliveryStatus();
+  }
+  
+  void baking(){
+    print('$cookieName baking process is ongoing...');
+  }
+  
+  bool isCooling(){
+    return isCool=true;
+  }
+  
+  void deliveryStatus(){
+    print('$cookieName & \$$cookiePrice  is secessfully delivered...');
+  }
+}
   
   
   void deliveryStatus(){
