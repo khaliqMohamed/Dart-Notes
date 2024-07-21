@@ -1,0 +1,51 @@
+void main(){
+  
+  BakeryShop B_Shop=BakeryShop('Cake',50);
+  B_Shop.itemPreparation();
+  B_Shop.deliveryStatus('26,michael street,UAE');
+  
+}
+
+
+class BakeryShop{
+  
+  String? itemName='cookie';
+  int? itemPrice;
+  var userAddress;
+  
+  BakeryShop(String itemName,this.itemPrice){    //this arguments are new, not represented to above declared thing..
+    print(this.itemName);     // if you want to print the itemname val inside in the class just we print it like this
+    this.itemName=itemName;   //this.itemName represent publicly declared itemname and reasssigned val from the obj creattion..
+    
+    print('Please Enter the Item You Want?');
+    
+  }
+  
+  void itemPreparation(){
+    
+    print('$itemName Preparation is Starting......');
+    
+  }
+  
+  void deliveryStatus(userAddress){
+    
+    print('Could you please give us your delivery details ?');
+    
+    print('-------------------------------------------');
+    
+    print('---> $itemName <---');
+    
+    print('---> \$$itemPrice <---');
+    
+    print('---> $userAddress <---');
+    
+    print('Item Delivered Sucessfully....');
+    
+  }
+  
+  
+  
+  
+  
+  
+}
