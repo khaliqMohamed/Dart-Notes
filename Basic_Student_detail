@@ -1,0 +1,60 @@
+void main(){
+  
+  studentDetail stud_det=studentDetail(stud_reg_no : 121,stud_Name : 'john');
+  stud_det.printDetails();
+  stud_det.display_marks(70,80,90,78,90);
+  stud_det.calculation_marks();
+  
+  
+  
+  
+}
+
+
+class studentDetail{
+  String? stud_Name;
+  int? stud_reg_no;
+  var eng_mark;
+  var tam_mark;
+  var mat_mark;
+  var sci_mark;
+  var ss_mark;
+  var total_marks;
+  double? average_marks;
+  
+  studentDetail({required this.stud_Name,required this.stud_reg_no}){
+    print('constructor called...');
+  }
+  
+  void printDetails(){
+    print('student name is $stud_Name');
+    print('student register no is $stud_reg_no');
+  }
+  
+  void display_marks(int engMark,int tamMark,int matMark,int sciMark,int ssMark){
+    
+    this.eng_mark=engMark;
+    this.tam_mark=tamMark;
+    this.mat_mark=matMark;
+    this.sci_mark=sciMark;
+    this.ss_mark=ssMark;
+    
+    print('English mark is $eng_mark');
+    print('Tamil mark is $tam_mark');
+    print('Maths mark is $mat_mark');
+    print('Science mark is $sci_mark');
+    print('Social Science mark is $ss_mark');
+  }
+  
+  void calculation_marks(){
+    total_marks=eng_mark+tam_mark+mat_mark+sci_mark+ss_mark;
+    print('Total Mark is $total_marks');
+    average_marks=total_marks/5;
+    print('Average Marks is $average_marks');
+  }
+  
+  
+  
+  
+  
+}
