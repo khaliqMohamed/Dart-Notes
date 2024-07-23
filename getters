@@ -1,0 +1,33 @@
+void main(){
+  
+  getters get_mod=getters();
+  
+  
+  // get_mod.height=10; ---> in this line we get an error bcoz we can't change the getters value outside of the class
+  
+  get_mod._height=10;
+  
+  print(get_mod.height);
+}
+
+
+class getters{
+  
+  int _height=5;
+  
+  
+  // GETTERS -> read only value. only change the values of getters inside of the class but outside of the class you can't
+  
+  // SYNTAX : datatype get var_name =>(fat arrow func for returning which value you want) var_name for returning val...
+  
+  int get height => _height;
+  
+  
+  void mod_Height(int h){
+    
+    _height=h;
+    
+  }
+  
+  
+}
