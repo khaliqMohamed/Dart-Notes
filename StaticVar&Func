@@ -1,0 +1,31 @@
+//in static methods or variables we don't need a obj to access static variables and function 
+
+// but in some cases we need an constructor like this so everytime this static methodology is not to feasible to us.
+
+
+void main(){
+  
+  final svar=staticVar();
+  
+  print(staticVar.height);  // without obj we call static variable 
+  
+  print(svar.width);  // non-static var need a obj to access it 
+  
+  print(staticVar.heightval()); // without obj we call static func
+  
+}
+
+
+class staticVar{
+  
+  static int height=10;   //for this one we don't need an obj to access it
+  
+  
+  int width=10;   // for this one we need a obj to access it
+  
+  static int heightval(){
+    return 10;
+  }
+  
+  
+}
