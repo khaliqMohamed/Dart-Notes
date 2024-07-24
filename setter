@@ -1,0 +1,27 @@
+void main(){
+  
+  setters setter=setters();
+  
+  setter.setHeight=12;
+  
+  print(setter.getHeight);
+  
+ 
+  
+}
+
+
+class setters{
+  
+  int height=10;
+  
+  set setHeight(int h){
+    height=h;
+  }
+  
+  int get getHeight=>height;
+  
+  
+  
+  
+}
