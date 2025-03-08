@@ -1,0 +1,27 @@
+import 'dart:math';
+
+
+class Dice{
+  final int sides;
+  const Dice({required this.sides});
+  int rolltheDice(){
+    final diceValue=Random().nextInt(sides);
+    return diceValue;
+  }
+}
+
+void main(){
+    Dice dice=Dice(sides:6);
+    Dice dice_two=Dice(sides:6);
+    int dice_value_1=dice.rolltheDice();
+    int dice_value_2=dice_two.rolltheDice(); 
+    print(dice_value_1);
+    print(dice_value_2);
+    
+    if (dice_value_1==dice_value_2) {
+      print("Dice are equal");
+    }
+    else{
+      print("well performance but try again...!");
+    }
+}
